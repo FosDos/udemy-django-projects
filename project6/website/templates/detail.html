@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="details">
+	<h2>
+		{{robin.title}}
+	</h2>
+	<p>
+		{{robin.text}}
+	</p>
+</div>
+
+<h4>
+	<a href="{% url 'article_edit' robin.pk %}"> Edit This Post</a>
+</h4>
+<h4>
+	<a href="{% url 'article_delete' robin.pk %}"> Delete This Post</a>
+
+</h4>
+
+
+
+{% endblock content %}
